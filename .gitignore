@@ -1,0 +1,11 @@
+# OSX
+.DS_Store
+
+# Python
+venv
+
+# Debugging
+debug.png
+
+# results
+out.png
