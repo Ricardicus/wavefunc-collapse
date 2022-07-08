@@ -7,18 +7,56 @@ https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/
 
 # Generated examples
 
-Here are some example images I have generated with this program:
+Here are some example images I have generated with this program.
+
+## Flowers sample
+
+Using this sample image provided by mxgmn:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/samples/MoreFlowers.png"></img>
+
+I generated these:
 
 <img 
 src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/moreflowers.png"></img>
 
-
-<img 
-src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/skyline2.png"></img>
-
+Collapsing the bottom and the top with the same pattern as the original (soil and blue sky), then going for a big output space I renedered this flower power image:
 
 <img 
 src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/massive-more-flowers.png"></img>
 
+Using this skyline sample:
 
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/samples/Skyline2.png"></img>
+
+I rendered this:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/skyline2.png"></img>
+
+Using this "Rooms" image:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/samples/Rooms.png"></img>
+
+I rendered this:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/big_rooms.png"></img>
+
+Using this "MagicOffice" image:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/samples/MagicOffice.png"></img>
+
+I generated this:
+
+<img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/magic_office.png"></img>
+
+# Comments
+
+This algorithm works well with small pixelmaps. The number of colors is important especially to keep low. The algorithm uses the number of colors as a power exponent, for indexing patterns, so images with a lot of different colors will fail. I have successfully run this with 45 colors, but I think that is very close to the limit.
 
