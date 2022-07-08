@@ -19,10 +19,15 @@ src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/sampl
 I generated these:
 
 <img 
+src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/flowers.png"></img>
+
+Collapsing the bottom and the top with the same pattern as the original (soil and blue sky), before collapsing the entire image using entropy measures, I generated this:
+
+<img 
 src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/moreflowers.png"></img>
 
-Collapsing the bottom and the top with the same pattern as the original (soil and blue sky), then going for a big output space I renedered this flower power image:
-
+Going for a big output space I renedered this flower power image:
+ 
 <img 
 src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/massive-more-flowers.png"></img>
 
