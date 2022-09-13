@@ -91,7 +91,7 @@ class OverlappingModel:
         if keepdown or keepup:
             self.bottom_pattern = pattern_from_world(self.inX-N+1, 0)
             idx = self.patternToIndex(self.bottom_pattern)
-            key = str(idx)
+            key = idx
             if ( not key in self.weights ):    
                 self.weights[key] = 1
            
@@ -100,7 +100,7 @@ class OverlappingModel:
 
         self.patterns = []
         for key in self.weights:
-            idx = int(key)
+            idx = key
             p = self.indexToPattern(idx)
             self.patterns.append(p)
 
@@ -226,7 +226,7 @@ class OverlappingModel:
 
         for p in self.weights:
             value = self.weights[p]
-            pattern = self.indexToPattern(int(p))
+            pattern = self.indexToPattern(p)
             s = ""
             for x in range(len(pattern)):
                 s += "\n"
@@ -454,37 +454,20 @@ class OverlappingModel:
     def patternToIndex(self, p):
         # 0 < x < N
         # 0 < y < N
-        count = 0
-        power = 1
+        s = ""
         for x in range(0, self.N):
             for y in range(0, self.N):
-                count += p[x][y] * power
-                power *= self.C
-        return count 
+                if y > 0:
+                    s += ","
+                s += str(p[x][y])
+            s += ";"
+        return s 
 
     def indexToPattern(self, idx):
         patternArray = []
-        
-        for x in range(0, self.N):
-            patternArray.append([])
-            for y in range(0, self.N):
-                patternArray[x].append(None) 
-
-        if not isinstance(idx, int):
-            traceback.print_exc()
-            raise Exception("Error in index, expected int got: " + str(type(idx)))
-        count = 0
-        residue = idx
-        power = math.pow(self.C, self.N*self.N)
-        for x in range(0, self.N):
-            for y in range(0, self.N):
-                power /= self.C
-                count = 0
-                while ( residue >= power ):
-                    residue -= power
-                    count += 1
-                patternArray[self.N-x-1][self.N-y-1] = count
-
+        for x in idx.split(";"):
+            if ( len(x) > 0) :
+                patternArray.append([int(i) for i in x.split(",")])        
         return patternArray
 
 class ImageHandler:

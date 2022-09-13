@@ -61,7 +61,4 @@ I generated this:
 <img 
 src="https://raw.githubusercontent.com/Ricardicus/wavefunc-collapse/master/generated_examples/magic_office.png"></img>
 
-# Comments
-
-This algorithm works well with small pixelmaps. The number of colors is important especially to keep low. The algorithm uses the number of colors as a power exponent, for indexing patterns, so images with a lot of different colors will fail. I have successfully run this with 45 colors, but I think that is very close to the limit.
 
